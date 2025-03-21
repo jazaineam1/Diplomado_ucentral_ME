@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1 - Clase 3 - Estructuras Lógicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .active {
+            display: block;
+        }
+        .navigation {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide active">
+        <h1>M1 - Clase 3 - Estructuras Lógicas</h1>
+        <p>Introducción a las estructuras lógicas en programación.</p>
+    </div>
+
+    <div class="slide">
+        <h2>1. ¿Qué son las estructuras lógicas?</h2>
+        <p>Las estructuras lógicas son herramientas que permiten tomar decisiones en un programa.</p>
+    </div>
+
+    <div class="slide">
+        <h2>2. Tipos de estructuras lógicas</h2>
+        <ul>
+            <li>Estructuras de selección (if, switch)</li>
+            <li>Estructuras de repetición (for, while)</li>
+            <li>Estructuras de salto (break, continue)</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>3. Estructura de selección</h2>
+        <p>La estructura de selección permite ejecutar diferentes bloques de código según condiciones específicas.</p>
+    </div>
+
+    <div class="slide">
+        <h2>4. Ejemplo de if</h2>
+        <pre>
+if (condición) {
+    // código a ejecutar si la condición es verdadera
+}
+        </pre>
+    </div>
+
+    <div class="slide">
+        <h2>5. Estructura de repetición</h2>
+        <p>Las estructuras de repetición permiten ejecutar un bloque de código varias veces.</p>
+    </div>
+
+    <div class="slide">
+        <h2>6. Ejemplo de for</h2>
+        <pre>
+for (inicialización; condición; incremento) {
+    // código a ejecutar
+}
+        </pre>
+    </div>
+
+    <div class="navigation">
+        <button id="prev">Anterior</button>
+        <button id="next">Siguiente</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        });
+    </script>
+
+</body>
+</html>

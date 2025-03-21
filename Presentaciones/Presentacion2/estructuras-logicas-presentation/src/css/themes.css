@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1 - Clase 3 - Estructuras Lógicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide active">
+        <h1>M1 - Clase 3 - Estructuras Lógicas</h1>
+        <p>Introducción a las estructuras lógicas en programación.</p>
+    </div>
+
+    <div class="slide">
+        <h2>1. Estructuras de Control</h2>
+        <p>Las estructuras de control permiten tomar decisiones en el flujo de un programa.</p>
+    </div>
+
+    <div class="slide">
+        <h2>2. Condicionales</h2>
+        <p>Las estructuras condicionales permiten ejecutar diferentes bloques de código según una condición.</p>
+        <ul>
+            <li>if</li>
+            <li>else</li>
+            <li>switch</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>3. Bucles</h2>
+        <p>Los bucles permiten repetir un bloque de código varias veces.</p>
+        <ul>
+            <li>for</li>
+            <li>while</li>
+            <li>do while</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>4. Operadores Lógicos</h2>
+        <p>Los operadores lógicos se utilizan para combinar condiciones.</p>
+        <ul>
+            <li>AND (&&)</li>
+            <li>OR (||)</li>
+            <li>NOT (!)</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <button onclick="prevSlide()">Anterior</button>
+        <button onclick="nextSlide()">Siguiente</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+
+</body>
+</html>

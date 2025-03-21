@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1 - Clase 3 - Estructuras Lógicas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #1abc9c;
+            --text-color: #333;
+            --light-bg: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .presentation-container {
+            max-width: 90%;
+            margin: 0 auto;
+            position: relative;
+            height: 90vh;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            background-color: white;
+            overflow: hidden;
+        }
+        
+        .slide {
+            display: none;
+            padding: 40px;
+            height: calc(90vh - 80px);
+            overflow-y: auto;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        .slide-header {
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        ul {
+            text-align: left;
+            max-width: 80%;
+            margin: 20px auto;
+        }
+        
+        li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        .code-example {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            font-family: monospace;
+            text-align: left;
+            max-width: 80%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .code-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            border-radius: 0 0 8px 0;
+        }
+        
+        pre {
+            margin: 10px 0 0 0;
+            white-space: pre-wrap;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .slide-image {
+            max-width: 70%;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .column {
+            flex: 1;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- El contenido de las diapositivas estará aquí -->
+        
+        <div class="progress-bar" id="progressBar"></div>
+        
+        <div class="navigation">
+            <button id="prev"><i class="fas fa-arrow-left"></i> Anterior</button>
+            <div id="slideCounter" style="margin: 12px 10px; font-weight: bold;"></div>
+            <button id="next">Siguiente <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // El script javascript estará aquí
+    </script>
+</body>
+</html>
